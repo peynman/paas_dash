@@ -1,0 +1,50 @@
+{
+  "name": "@peynman/press-vue-admin",
+  "version": "1.0.0",
+  "description": "Larapress Vue AdminPanel",
+  "main": "index.js",
+  "module": "../src/routes.js",
+  "license": "MIT",
+  "private": false,
+  "homepage": "https://github.com/peynman/press-vue-admin",
+  "url": "https://github.com/peynman/press-vue-admin/issues",
+  "email": "packages.press-vue-admin@peynman.ir",
+  "author": "peynman",
+  "files": [
+    "components/*",
+    "locale/*",
+    "index.js",
+    "routes.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peynman/press-vue-admin.git",
+    "directory": "dist"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "peerDependencies": {
+    "@peynman/press-vue-core": "^1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.2.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue": "^2.6.14",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^5.67.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.1"
+  }
+}
