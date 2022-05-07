@@ -1,8 +1,7 @@
 # Larapress Vue2 Admin Panel Core
 
 ## Content
-* Mixins
-* Utility & Helper functions
+* Dashboard Components & routes
 
 ## install
-* ``yarn add @peynman/press-vue-core``
+* ``yarn add @peynman/press-vue-admin``
