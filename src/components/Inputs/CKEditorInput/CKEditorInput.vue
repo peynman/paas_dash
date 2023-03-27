@@ -40,7 +40,7 @@
       },
       editorConfig () {
         return this.$press.options.getCKEditorConfig(this)
-      }
+      },
     },
     data: vm => ({
       internalValue: vm.value,

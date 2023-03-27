@@ -2,13 +2,13 @@
   <centered color="#f7f7f7">
     <div class="d-flex flex-column align-center justify-center">
       <v-img :src="theme.admin.signin.logo" width="105px" class="mb-3" />
-      <v-row align="center" justify="center" class="fill-width">
+      <div class="fill-width d-flex flex-row flex-grow-1 justify-center align-center">
         <v-col cols="12" sm="8">
           <v-card elevation="2" shaped>
             <admin-signin-form @success="onLoginSuccess" />
           </v-card>
         </v-col>
-      </v-row>
+      </div>
     </div>
   </centered>
 </template>

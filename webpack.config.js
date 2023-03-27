@@ -2,13 +2,13 @@ const path = require('path')
 const glob = require('glob')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const {
-    CleanWebpackPlugin
+    CleanWebpackPlugin,
 } = require('clean-webpack-plugin')
 const {
-    BundleAnalyzerPlugin
+    BundleAnalyzerPlugin,
 } = require('webpack-bundle-analyzer')
 const {
-    VueLoaderPlugin
+    VueLoaderPlugin,
 } = require('vue-loader')
 const webpack = require('webpack')
 
@@ -47,7 +47,7 @@ module.exports = {
         /^vue.*/,
         /^vuex.*/,
         /^@peynman.*/,
-        /^.*\.(vue)$/
+        /^.*\.(vue)$/,
     ],
     resolve: {
         symlinks: false,
@@ -58,8 +58,8 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader'
-                }
+                    loader: 'babel-loader',
+                },
             },
             {
                 test: /\.vue$/,
@@ -69,10 +69,10 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     'vue-style-loader',
-                    'css-loader'
-                ]
-            }
-        ]
+                    'css-loader',
+                ],
+            },
+        ],
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -85,8 +85,8 @@ module.exports = {
         new VueLoaderPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: '"production"'
-            }
+                NODE_ENV: '"production"',
+            },
         }),
         new BundleAnalyzerPlugin({
             openAnalyzer: false,
@@ -96,23 +96,23 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [{
                 from: './package.json',
-                to: './package.json'
-            },{
+                to: './package.json',
+            }, {
                 from: './src/templates/**',
-                to({ context, absoluteFilename }) {
+                to ({ context, absoluteFilename }) {
                     const relPath = path.relative(context, absoluteFilename).substring('src/templates'.length)
-                    return `templates/${relPath}`;
+                    return `templates/${relPath}`
                 },
             }, {
                 from: './src/components/**',
-                to({ context, absoluteFilename }) {
+                to ({ context, absoluteFilename }) {
                     const relPath = path.relative(context, absoluteFilename).substring('src/components'.length)
-                    return `components/${relPath}`;
+                    return `components/${relPath}`
                 },
-            },{
+            }, {
                 from: './src/pages/*.vue',
-                to: './pages/[name].vue'
-            }]
+                to: './pages/[name].vue',
+            }],
         }),
-    ]
+    ],
 }

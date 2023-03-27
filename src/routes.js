@@ -2,14 +2,24 @@ export default [
   {
     path: '/admin',
     component: () => import('./pages/AdminHome.vue'),
+    meta: {
+      requiresAuth: true,
+    },
   },
   {
     path: '/admin/signin',
     component: () => import('./pages/AdminSignin.vue'),
+    name: 'signin',
+    meta: {
+      requiresAuth: false,
+    },
   },
   {
     path: '/admin/:crud',
     component: () => import('./pages/AdminPage.vue'),
+    meta: {
+      requiresAuth: true,
+    },
     children: [
       {
         path: '',
@@ -18,6 +28,9 @@ export default [
           return {
             crudName: route.params.crud,
           }
+        },
+        meta: {
+          requiresAuth: true,
         },
       },
       {
@@ -28,6 +41,9 @@ export default [
             crudName: route.params.crud,
           }
         },
+        meta: {
+          requiresAuth: true,
+        },
       },
       {
         path: 'reports',
@@ -36,6 +52,9 @@ export default [
           return {
             crudName: route.params.crud,
           }
+        },
+        meta: {
+          requiresAuth: true,
         },
       },
       {
@@ -46,6 +65,9 @@ export default [
             crudName: route.params.crud,
             objectId: route.params.id,
           }
+        },
+        meta: {
+          requiresAuth: true,
         },
       },
     ],

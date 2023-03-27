@@ -8,7 +8,7 @@
   "private": false,
   "homepage": "https://github.com/peynman/press-vue-admin",
   "url": "https://github.com/peynman/press-vue-admin/issues",
-  "email": "packages.press-vue-admin@peynman.ir",
+  "email": "packages.npm.press-vue-admin@roghumi.com",
   "author": "peynman",
   "files": [
     "components/*",

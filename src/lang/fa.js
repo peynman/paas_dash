@@ -8,6 +8,11 @@ export default {
       admin: {
         title: 'رقومی',
       },
+      server: {
+        title: 'پنل ادمین رقومی',
+        message: 'آدرس سرور را برای اتصال انتخاب کنید',
+        hint: '',
+      },
     },
     components: {
       admin: {
@@ -84,6 +89,8 @@ export default {
           sendOTC: 'ورود با یکبار رمز',
           signupMessage: 'حساب کاربری ندارید؟',
           signup: 'ثبت نام کنید',
+          server: 'سرور',
+          serverHint: 'آدرس سرور برای اتصال را انتخاب یا یک سرور جدید وارد کنید',
         },
         account: {
           edit: 'ویرایش اطلاعات کاربری',
@@ -297,10 +304,26 @@ export default {
           class: 'کلاس منبع',
           path: 'کلید مسیر دریافت',
           method: 'اسلوب منبع',
+          args: 'آرگومان‌ها',
           actions: 'امکانات',
           titleCreate: 'افزودن منبع جدید',
           titleEdit: 'ویرایش منبع',
           submit: 'افزودن/اعمال تغییرات',
+          arg: {
+            create: 'ثبت آرگومان جدید',
+            edit: 'ویرایش آرگومان',
+            type: 'نوع آرگومان',
+            types: {
+              string: 'String',
+              json: 'Json',
+              request: 'Request',
+              route: 'Route',
+              param: 'Route Parameter',
+              source: 'Other Souce',
+            },
+            value: 'مقدار آرگومان',
+            index: 'اندیس آرگومان',
+          },
         },
         rules: {
           required: 'وارد کردن این قسمت الزامی است',
@@ -328,6 +351,10 @@ export default {
             pageTitle: 'عنوان صفحه',
             pageIcon: 'آیکن صفحه',
           },
+        },
+        userCart: {
+          title: 'سبد خرید شما',
+          empty: 'سبد خرید شما خالی است',
         },
       },
       website: {

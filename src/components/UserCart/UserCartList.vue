@@ -1,8 +1,5 @@
 <template>
   <v-list
-    :color="theme.website.userCart.list.color"
-    :light="theme.website.userCart.list.light"
-    :dark="theme.website.userCart.list.dark"
     :max-height="maxHeight"
     :style="`${maxHeight ? 'overflow-y: auto;':''}`"
   >
@@ -15,7 +12,7 @@
     </div>
     <v-list-item v-else>
       <v-list-item-content>
-        <v-list-item-title>{{ $t('components.website.userCart.empty') }}</v-list-item-title>
+        <v-list-item-title>{{ $t('components.admin.userCart.empty') }}</v-list-item-title>
       </v-list-item-content>
     </v-list-item>
   </v-list>

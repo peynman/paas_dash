@@ -7,38 +7,45 @@
           v-model="internalValue.resource"
           :label="$t('components.admin.pageSources.resource')"
           :items="resources"
-          :rules="[ getRequiredRule() ]"
+          :rules="[getRequiredRule()]"
         />
         <v-select
           v-if="internalValue.resource === 'repository'"
           v-model="internalValue.class"
           :label="$t('components.admin.pageSources.class')"
           :items="classes"
-          :rules="[ getRequiredRule() ]"
+          :rules="[getRequiredRule()]"
         />
         <v-text-field
           v-if="internalValue.resource === 'object'"
           v-model="internalValue.class"
           :label="$t('components.admin.pageSources.class')"
-          :rules="[ getRequiredRule() ]"
+          :rules="[getRequiredRule()]"
         />
         <v-select
           v-if="internalValue.resource === 'repository'"
           v-model="internalValue.method"
           :label="$t('components.admin.pageSources.method')"
           :items="methods"
-          :rules="[ getRequiredRule() ]"
+          :rules="[getRequiredRule()]"
         />
         <v-text-field
           v-model="internalValue.path"
           :label="$t('components.admin.pageSources.path')"
-          :rules="[ getRequiredRule() ]"
+          :rules="[getRequiredRule()]"
+        />
+        <page-source-args-list
+          v-if="internalValue.resource === 'repository'"
+          v-model="internalValue.args"
+          class="mt-2"
+          :label="$t('components.admin.pageSources.args')"
+          :items="methods"
         />
       </v-form>
     </v-card-text>
     <v-card-actions>
       <v-btn color="success" @click="onUpdate">
-        {{ $t('components.admin.pageSources.submit') }}
+        {{ $t("components.admin.pageSources.submit") }}
       </v-btn>
     </v-card-actions>
   </v-card>
@@ -46,10 +53,14 @@
 
 <script>
   import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
+  import PageSourceArgsList from './PageSourceArgsList.vue'
   import Repos from './repos'
 
   export default {
     name: 'PageSourceEditCard',
+    components: {
+      PageSourceArgsList,
+    },
     mixins: [
       FormValidations(),
     ],
@@ -85,7 +96,9 @@
           return []
         }
 
-        const classShortName = this.classes.find(c => c.value === this.internalValue?.class)?.text
+        const classShortName = this.classes.find(
+          c => c.value === this.internalValue?.class
+        )?.text
         if (classShortName) {
           const methods = Repos[classShortName].methods ?? []
           return methods.map(m => ({

@@ -6,20 +6,37 @@
       <validations-alert :type="formAlertType" :errors="formAlertErrorList" :message="formAlertMessage" />
       <v-form ref="form" v-model="valid">
         <v-text-field
+          v-model="server"
+          :label="$t('components.admin.signin.server')"
+          :hint="$t('components.admin.signin.serverHint')"
+          :rules="[getRequiredRule(), getMinLengthRule(4)]"
+          v-bind="theme.admin.input"
+          v-if="customServer"
+        >
+          <template v-slot:append>
+            <v-btn icon @click="onCheckServer">
+              <v-icon small>mdi-check</v-icon>
+            </v-btn>
+          </template>
+        </v-text-field>
+        <v-text-field
+          v-if="serverOk"
           v-model="username"
           :label="$t('components.admin.signin.username')"
           :hint="$t('components.admin.signin.usernameHint')"
           :rules="[getRequiredRule(), getUsernameRule()]"
-          v-bind="theme.website.input"
+          v-bind="theme.admin.input"
         />
         <v-text-field
+          v-if="serverOk"
           v-model="password"
           :label="$t('components.admin.signin.password')"
           type="password"
           :rules="[getRequiredRule(), getMinLengthRule(6)]"
-          v-bind="theme.website.input"
+          v-bind="theme.admin.input"
         />
         <captcha-input
+          v-if="serverOk"
           v-model="captcha"
           :rules="[getRequiredRule()]"
           @submit="onSubmit"
@@ -65,10 +82,18 @@
     data: () => ({
       valid: false,
       loading: false,
+      server: null,
+      serverCheckVersion: null,
     }),
     computed: {
       canSubmit () {
         return !this.captchaLoading && this.valid
+      },
+      serverOk () {
+        return !this.customServer || this.serverCheckVersion
+      },
+      customServer () {
+        return [1, 'true', true, 'True'].indexOf(process.env.VUE_APP_API_BASE_CUSTOM) >= 0
       },
       ...mapGetters('captcha', [
         'captchaLoading',
@@ -77,6 +102,9 @@
     },
 
     methods: {
+      onCheckServer () {
+        
+      },
       onSubmit () {
         this.$refs.form.validate()
 

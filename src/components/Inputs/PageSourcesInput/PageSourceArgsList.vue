@@ -17,8 +17,8 @@
             v-on="on"
           ><v-icon>mdi-plus-circle</v-icon></v-btn>
         </template>
-        <page-source-edit-card
-          :title="$t('components.admin.pageSources.titleCreate')"
+        <page-source-arg-edit
+          :title="$t('components.admin.pageSources.arg.create')"
           :value="create"
           @input="onAddNewResource"
         />
@@ -29,19 +29,13 @@
         <thead>
           <tr>
             <th class="">
-              {{ $t("components.admin.pageSources.resource") }}
+              {{ $t("components.admin.pageSources.arg.type") }}
             </th>
             <th class="">
-              {{ $t("components.admin.pageSources.class") }}
+              {{ $t("components.admin.pageSources.arg.value") }}
             </th>
             <th class="">
-              {{ $t("components.admin.pageSources.method") }}
-            </th>
-            <th class="">
-              {{ $t("components.admin.pageSources.args") }}
-            </th>
-            <th class="">
-              {{ $t("components.admin.pageSources.path") }}
+              {{ $t("components.admin.pageSources.arg.index") }}
             </th>
             <th class="">
               {{ $t("components.admin.pageSources.actions") }}
@@ -49,14 +43,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr
-            v-for="(item, index) in internalValue"
-            :key="`page-source-${index}`"
-          >
-            <td>{{ item.resource }}</td>
-            <td>{{ item.class }}</td>
-            <td>{{ item.method }}</td>
-            <td>{{ item.path }}</td>
+          <tr v-for="(item, index) in internalValue" :key="`page-source-${index}`">
+            <td>{{ item.type }}</td>
+            <td>{{ item.value }}</td>
+            <td>{{ item.index }}</td>
             <td>
               <v-dialog max-width="766">
                 <template v-slot:activator="{ on }">
@@ -66,9 +56,9 @@
                     v-on="on"
                   ><v-icon small>mdi-database-edit</v-icon></v-btn>
                 </template>
-                <page-source-edit-card
+                <page-source-arg-edit
                   :value="item"
-                  :title="$t('components.admin.pageSources.titleEdit')"
+                  :title="$t('components.admin.pageSources.arg.edit')"
                   @input="onUpdateResource(index, $event)"
                 />
               </v-dialog>
@@ -90,13 +80,13 @@
 </template>
 
 <script>
-  import PageSourceEditCard from './PageSourceEditCard.vue'
+  import PageSourceArgEdit from './PageSourceArgEdit.vue'
   import ConfirmRemoveDialog from '../ConfirmDialog/ConfirmRemoveDialog.vue'
 
   export default {
-    name: 'PageSourceInout',
+    name: 'PageSourceArgsList',
     components: {
-      PageSourceEditCard,
+      PageSourceArgEdit,
       ConfirmRemoveDialog,
     },
     props: {

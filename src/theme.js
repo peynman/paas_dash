@@ -1,5 +1,35 @@
 export default {
     light: {
+        formatting: {
+            locale: 'fa',
+            timestampFormat: {
+                calendar: 'persian',
+                numberingSystem: 'arab',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                timeZone: 'Asia/Tehran',
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true,
+            },
+            dateFormat: {
+                calendar: 'persian',
+                numberingSystem: 'arab',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                timeZone: 'Asia/Tehran',
+            },
+            timeFormat: {
+                calendar: 'persian',
+                numberingSystem: 'arab',
+                timeZone: 'Asia/Tehran',
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true,
+            },
+        },
         admin: {
             overlay: {
                 color: 'blue-grey darken-4',
@@ -15,36 +45,6 @@ export default {
                 info: '#27aad6',
                 success: '#128748',
                 warning: '#d6892b',
-            },
-            formatting: {
-                locale: 'fa',
-                timestampFormat: {
-                    calendar: 'persian',
-                    numberingSystem: 'arab',
-                    day: 'numeric',
-                    month: 'long',
-                    year: 'numeric',
-                    timeZone: 'Asia/Tehran',
-                    hour: 'numeric',
-                    minute: 'numeric',
-                    hour12: true,
-                },
-                dateFormat: {
-                    calendar: 'persian',
-                    numberingSystem: 'arab',
-                    day: 'numeric',
-                    month: 'long',
-                    year: 'numeric',
-                    timeZone: 'Asia/Tehran',
-                },
-                timeFormat: {
-                    calendar: 'persian',
-                    numberingSystem: 'arab',
-                    timeZone: 'Asia/Tehran',
-                    hour: 'numeric',
-                    minute: 'numeric',
-                    hour12: true,
-                },
             },
             appbar: {
                 color: '#1A9348',
@@ -104,6 +104,36 @@ export default {
         },
     },
     dark: {
+        formatting: {
+            locale: 'fa',
+            timestampFormat: {
+                calendar: 'persian',
+                numberingSystem: 'arab',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                timeZone: 'Asia/Tehran',
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true,
+            },
+            dateFormat: {
+                calendar: 'persian',
+                numberingSystem: 'arab',
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                timeZone: 'Asia/Tehran',
+            },
+            timeFormat: {
+                calendar: 'persian',
+                numberingSystem: 'arab',
+                timeZone: 'Asia/Tehran',
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true,
+            },
+        },
         admin: {
             overlay: {
                 color: 'blue-grey darken-4',
@@ -119,36 +149,6 @@ export default {
                 info: '#27aad6',
                 success: '#128748',
                 warning: '#d6892b',
-            },
-            formatting: {
-                locale: 'fa',
-                timestampFormat: {
-                    calendar: 'persian',
-                    numberingSystem: 'arab',
-                    day: 'numeric',
-                    month: 'long',
-                    year: 'numeric',
-                    timeZone: 'Asia/Tehran',
-                    hour: 'numeric',
-                    minute: 'numeric',
-                    hour12: true,
-                },
-                dateFormat: {
-                    calendar: 'persian',
-                    numberingSystem: 'arab',
-                    day: 'numeric',
-                    month: 'long',
-                    year: 'numeric',
-                    timeZone: 'Asia/Tehran',
-                },
-                timeFormat: {
-                    calendar: 'persian',
-                    numberingSystem: 'arab',
-                    timeZone: 'Asia/Tehran',
-                    hour: 'numeric',
-                    minute: 'numeric',
-                    hour12: true,
-                },
             },
             appbar: {
                 color: '#1A9348',
@@ -206,5 +206,5 @@ export default {
                 emptyDashboardImage: '',
             },
         },
-    }
+    },
 }
