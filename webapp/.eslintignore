@@ -1,0 +1,8 @@
+node_modules/**
+node_modules/
+*/components/Admin/Inputs/CKEditorInput/build/**/*.js
+*/components/Admin/Inputs/CKEditorInput/build/*.js
+*/plugins/ckeditor/**/*.js
+*/plugins/ckeditor/*.js
+*.css
+*.sass
