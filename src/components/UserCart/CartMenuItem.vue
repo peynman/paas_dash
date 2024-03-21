@@ -37,7 +37,7 @@
 </template>
 
 <script>
-  import Product from '@peynman/press-vue-core/mixins/Product'
+  import Product from '../../mixins/Product'
 
   export default {
     name: 'CartMenuItem',

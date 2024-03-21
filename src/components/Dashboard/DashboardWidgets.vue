@@ -9,9 +9,9 @@
 </template>
 
 <script>
-  import WidgetsRenderer from '@peynman/press-vue-core/mixins/WidgetsRenderer'
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
-  import { getCrudResourceFolderFromName } from '@peynman/press-vue-core/utils/crud'
+  import WidgetsRenderer from '../../mixins/WidgetsRenderer'
+  import FormValidations from '../../mixins/FormValidations'
+  import { getCrudResourceFolderFromName } from '../../utils/crud'
 
   export default {
     name: 'DashboardWidgets',
@@ -41,7 +41,7 @@
         if (this.widgets) {
           const promises = []
           this.widgets.forEach(w => {
-            promises.push(import('@peynman/press-vue-core/crud/' + getCrudResourceFolderFromName(w.crud)))
+            promises.push(import('../../crud/' + getCrudResourceFolderFromName(w.crud)))
           })
           Promise.all(promises).then(modules => {
             const mm = modules.map(m => m.default(this))

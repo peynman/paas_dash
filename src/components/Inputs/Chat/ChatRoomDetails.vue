@@ -59,7 +59,7 @@
 </template>
 
 <script>
-  import ChatRoom from '@peynman/press-vue-core/mixins/ChatRoom'
+  import ChatRoom from '../../../mixins/ChatRoom'
   import ChatMessageItem from './ChatMessageItem'
   import ChatMessageForm from './ChatMessageForm'
 

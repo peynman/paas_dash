@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import Decoratable from '@peynman/press-vue-core/mixins/Decoratable'
+  import Decoratable from '../../mixins/Decoratable'
 
   export default {
     name: 'ObjectNameTitleColumn',

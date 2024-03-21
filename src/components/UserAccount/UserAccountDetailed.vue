@@ -51,7 +51,7 @@
 
 <script>
   import UserAccountMenu from './UserAccountMenu.vue'
-  import UserProfile from '@peynman/press-vue-core/mixins/UserProfile'
+  import UserProfile from '../../mixins/UserProfile'
 
   export default {
     name: 'UserAccountDetailed',

@@ -13,11 +13,11 @@
 </template>
 
 <script>
-  import User from '@peynman/press-vue-core/mixins/User'
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
+  import User from '../../../mixins/User'
+  import FormValidations from '../../../mixins/FormValidations'
   import ValidationsAlert from '..//ValidationsAlert/ValidationsAlert.vue'
   import { VCrudApiForm } from 'vuetify/lib/components/VCrud'
-  import { getCrudResourceFolderFromName } from '@peynman/press-vue-core/utils/crud'
+  import { getCrudResourceFolderFromName } from '../../../utils/crud'
 
   export default {
     name: 'CrudEditor',

@@ -41,8 +41,8 @@
 </template>
 
 <script>
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
-  import UserProfile from '@peynman/press-vue-core/mixins/UserProfile'
+  import Themeable from '../../mixins/Themeable'
+  import UserProfile from '../../mixins/UserProfile'
   import UserAccountMenu from '../UserAccount/UserAccountMenu.vue'
   import NotificationsMenu from './NotificationsMenu.vue'
   import LanguageMenu from './LanguageMenu.vue'

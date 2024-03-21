@@ -43,8 +43,8 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import WidgetsRenderer from '@peynman/press-vue-core/mixins/WidgetsRenderer'
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
+  import WidgetsRenderer from '../../../mixins/WidgetsRenderer'
+  import FormValidations from '../../../mixins/FormValidations'
 
   export default {
     name: 'ProductDetailsInput',

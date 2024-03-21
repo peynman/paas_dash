@@ -27,7 +27,7 @@
 </template>
 
 <script>
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
+  import FormValidations from '../../../mixins/FormValidations'
   import DashboardPageEdit from '../../Dashboard/DashboardPageEdit.vue'
 
   export default {

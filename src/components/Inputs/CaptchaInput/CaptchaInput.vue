@@ -28,7 +28,7 @@
 
 <script>
   import { mapActions, mapGetters } from 'vuex'
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
+  import Themeable from '../../../mixins/Themeable'
 
   export default {
     name: 'CaptchaInput',

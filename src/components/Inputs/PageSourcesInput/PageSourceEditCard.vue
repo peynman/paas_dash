@@ -52,7 +52,7 @@
 </template>
 
 <script>
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
+  import FormValidations from '../../../mixins/FormValidations'
   import PageSourceArgsList from './PageSourceArgsList.vue'
   import Repos from './repos'
 

@@ -3,10 +3,10 @@
 </template>
 
 <script>
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
-  import CrudRoute from '@peynman/press-vue-core/mixins/CrudRoute'
+  import FormValidations from '../mixins/FormValidations'
+  import CrudRoute from '../mixins/CrudRoute'
   import CrudEditor from '../components/Inputs/CrudEditor/CrudEditor.vue'
-  import WidgetsRenderer from '@peynman/press-vue-core/mixins/WidgetsRenderer'
+  import WidgetsRenderer from '../mixins/WidgetsRenderer'
 
   export default {
     name: 'AdminEdit',

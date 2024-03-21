@@ -85,8 +85,8 @@
 </template>
 
 <script>
-  import User from '@peynman/press-vue-core/mixins/User'
-  import Product from '@peynman/press-vue-core/mixins/Product'
+  import User from '../../mixins/User'
+  import Product from '../../mixins/Product'
   import ConfirmRemoveDialog from '../Inputs/ConfirmDialog/ConfirmRemoveDialog.vue'
 
   export default {

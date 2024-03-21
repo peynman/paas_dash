@@ -26,7 +26,7 @@
 </template>
 
 <script>
-  import UserCartDetails from '@peynman/press-vue-core/mixins/UserCartDetails'
+  import UserCartDetails from '../../mixins/UserCartDetails'
 
   export default {
     name: 'CartAmount',

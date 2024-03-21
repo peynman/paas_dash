@@ -7,8 +7,10 @@
 </template>
 
 <script>
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
-  import WebsiteTheme from '../../src/theme'
+  import Themeable from '@peynman/press-vue-admin/mixins/Themeable'
+  import AdminTheme from '@peynman/press-vue-admin/theme'
+  import { mergeDeep } from '@peynman/press-vue-admin/utils/helpers'
+  import AppConfigTheme from './config/theme'
 
   export default {
     mixins: [
@@ -23,7 +25,7 @@
       },
     },
     created () {
-      this.$store.commit('theme/appendTheme', WebsiteTheme)
+      this.$store.commit('theme/appendTheme', mergeDeep(AdminTheme, AppConfigTheme))
 
       if (this.$config.autoSaturate) {
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {

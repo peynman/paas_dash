@@ -39,7 +39,7 @@
 </template>
 
 <script>
-  import UserNotifications from '@peynman/press-vue-core/mixins/UserNotifications'
+  import UserNotifications from '../../mixins/UserNotifications'
 
   export default {
     name: 'NotificationsMenu',

@@ -14,7 +14,7 @@
 <script>
   import AdminAppbar from '../../components/AppBar/AdminAppbar.vue'
   import AdminNavigation from '../../components/Navigation/AdminNavigation.vue'
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
+  import Themeable from '../../mixins/Themeable'
 
   export default {
     name: 'Dashboard',

@@ -59,9 +59,9 @@
   import { mapGetters } from 'vuex'
   import CaptchaInput from '../Inputs/CaptchaInput/CaptchaInput.vue'
   import ValidationsAlert from '../Inputs/ValidationsAlert/ValidationsAlert.vue'
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
-  import { toEnglishDigits } from '@peynman/press-vue-core/utils/helpers'
+  import FormValidations from '../../mixins/FormValidations'
+  import Themeable from '../../mixins/Themeable'
+  import { toEnglishDigits } from '../../utils/helpers'
 
   export default {
     name: 'AdminSigninForm',

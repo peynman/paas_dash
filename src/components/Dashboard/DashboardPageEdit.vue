@@ -49,7 +49,7 @@
 </template>
 
 <script>
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
+  import FormValidations from '../../mixins/FormValidations'
   import ConfirmRemoveDialog from '../Inputs/ConfirmDialog/ConfirmRemoveDialog.vue'
   import IconPicker from '../Inputs/IconPicker/IconPicker.vue'
 

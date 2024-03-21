@@ -58,12 +58,12 @@
 </template>
 
 <script>
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
+  import FormValidations from '../../../mixins/FormValidations'
+  import Themeable from '../../../mixins/Themeable'
   import LocationInput from '../LocationInput/LocationInput.vue'
-  import Iran from '@peynman/press-vue-core/mixins/Iran'
+  import Iran from '../../../mixins/Iran'
   import ValidationsAlert from '../ValidationsAlert/ValidationsAlert.vue'
-  import { toEnglishDigits } from '@peynman/press-vue-core/utils/helpers'
+  import { toEnglishDigits } from '../../../utils/helpers'
 
   export default {
     name: 'AddressForm',

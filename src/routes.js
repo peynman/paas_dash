@@ -3,7 +3,7 @@ export default [
     path: '/admin',
     component: () => import('./pages/AdminHome.vue'),
     meta: {
-      requiresAuth: true,
+      requiresAuth: false,
     },
   },
   {
@@ -18,7 +18,7 @@ export default [
     path: '/admin/:crud',
     component: () => import('./pages/AdminPage.vue'),
     meta: {
-      requiresAuth: true,
+      requiresAuth: false,
     },
     children: [
       {
@@ -30,7 +30,7 @@ export default [
           }
         },
         meta: {
-          requiresAuth: true,
+          requiresAuth: false,
         },
       },
       {
@@ -42,7 +42,7 @@ export default [
           }
         },
         meta: {
-          requiresAuth: true,
+          requiresAuth: false,
         },
       },
       {
@@ -54,7 +54,7 @@ export default [
           }
         },
         meta: {
-          requiresAuth: true,
+          requiresAuth: false,
         },
       },
       {
@@ -67,7 +67,7 @@ export default [
           }
         },
         meta: {
-          requiresAuth: true,
+          requiresAuth: false,
         },
       },
     ],

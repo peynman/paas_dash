@@ -1,6 +1,8 @@
 import '../../src/sass/index.scss'
 
 import Vue from 'vue'
+import PressApp from '@peynman/press-vue-admin/mixins/PressApp'
+
 import App from './App.vue'
 import store from './store'
 import router from './plugins/router'
@@ -8,7 +10,6 @@ import vuetify from './plugins/vuetify'
 import press from './plugins/press'
 import i18n from './plugins/i18n'
 import Config from './plugins/config'
-import PaasApp from '../../src/PaasApp'
 
 import './plugins/echo'
 import './plugins/externals'
@@ -22,6 +23,6 @@ new Vue({
   i18n,
   vuetify,
   $press: press(store),
-  mixins: [PaasApp],
+  mixins: [PressApp],
   render: h => h(App),
 }).$mount('#app')

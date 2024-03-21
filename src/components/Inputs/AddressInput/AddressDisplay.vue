@@ -37,8 +37,8 @@
 <script>
   import ConfirmRemoveDialog from '../ConfirmDialog/ConfirmRemoveDialog.vue'
   import AddressForm from './AddressForm.vue'
-  import Iran from '@peynman/press-vue-core/mixins/Iran'
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
+  import Iran from '../../../mixins/Iran'
+  import Themeable from '../../../mixins/Themeable'
 
   export default {
     name: 'AddressDisplay',

@@ -8,9 +8,9 @@
 </template>
 
 <script>
-  import CrudRoute from '@peynman/press-vue-core/mixins/CrudRoute'
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
-  import WidgetsRenderer from '@peynman/press-vue-core/mixins/WidgetsRenderer'
+  import CrudRoute from '../mixins/CrudRoute'
+  import FormValidations from '../mixins/FormValidations'
+  import WidgetsRenderer from '../mixins/WidgetsRenderer'
 
   export default {
     name: 'AdminReports',

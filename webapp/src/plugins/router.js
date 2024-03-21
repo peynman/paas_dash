@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import routes from '../../../src/routes'
+import AdminRoutes from '@peynman/press-vue-admin/routes'
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
   mode: 'history',
-  routes, // short for `routes: routes`
+  routes: {
+    ...AdminRoutes,
+  },
   scrollBehavior (to, from, savedPosition) {
     return {
       x: 0,

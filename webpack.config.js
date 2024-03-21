@@ -12,6 +12,9 @@ const {
 } = require('vue-loader')
 const webpack = require('webpack')
 
+const AllUtils = glob.sync('./src/utils/*.js').map(file => 'utils_' + path.parse(file).name)
+const AllMixins = glob.sync('./src/mixins/*.js').map(file => 'mixins_' + path.parse(file).name)
+
 module.exports = {
     mode: 'production',
     entry: {
@@ -27,12 +30,44 @@ module.exports = {
             import: './src/components/auto-schemas.js',
             filename: 'schemas.js',
         },
+        store: {
+            import: './src/store/index.js',
+            filename: 'store/index.js',
+            dependOn: AllUtils,
+        },
+        index: {
+            import: './src/index.js',
+            dependOn: 'store',
+        },
+        crud: {
+            import: './src/crud/index.js',
+            filename: 'crud/index.js',
+            dependOn: AllMixins,
+        },
         // locales
         ...glob.sync('./src/lang/*.js').reduce((entries, file) => {
             const p = path.parse(file)
             entries[`locale_${p.name}`] = {
                 import: file,
                 filename: `locale/${p.name.toLocaleLowerCase()}.js`,
+            }
+            return entries
+        }, {}),
+        // utils
+        ...glob.sync('./src/utils/*.js').reduce((entries, file) => {
+            const p = path.parse(file)
+            entries['utils_' + p.name] = {
+                import: file,
+                filename: 'utils/' + p.base,
+            }
+            return entries
+        }, {}),
+        // mixins
+        ...glob.sync('./src/mixins/*.js').reduce((entries, file) => {
+            const p = path.parse(file)
+            entries['mixins_' + p.name] = {
+                import: file,
+                filename: 'mixins/' + p.base,
             }
             return entries
         }, {}),

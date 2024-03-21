@@ -21,7 +21,7 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import ProductCategories from '@peynman/press-vue-core/mixins/ProductCategories'
+  import ProductCategories from '../../../mixins/ProductCategories'
   import HeirarchySelectInput from '../HeirarchySelectInput/HeirarchySelectInput.vue'
   function getNormalizedValues (value) {
     return Array.isArray(value) ? value.reduce((dic, c) => {

@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  dev:
+    image: node:12-alpine
+    working_dir: /app/webapp
+    network_mode: host
+    volumes:
+      - ./:/app
+      - ../vuetify:/home/vuetify
+      - ./dist:/home/press-vue-admin
+
+  build:
+    image: node:12-alpine
+    working_dir: /app
+    network_mode: host
+    volumes:
+      - ./:/app
+      - ../vuetify:/home/vuetify
+      - ./dist:/home/press-vue-admin

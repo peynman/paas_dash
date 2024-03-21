@@ -15,9 +15,9 @@
 </template>
 
 <script>
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
-  import UserCrud from '@peynman/press-vue-core/crud/User'
+  import FormValidations from '../mixins/FormValidations'
+  import Themeable from '../mixins/Themeable'
+  import UserCrud from '../crud/User'
   import Dashboard from '../templates/Dashboard/Dashboard.vue'
   import DashboardToolbar from '../components/Dashboard/DashboardToolbar.vue'
   import DashboardPages from '../components/Dashboard/DashboardPages.vue'

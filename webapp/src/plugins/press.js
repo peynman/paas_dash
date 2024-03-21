@@ -1,11 +1,11 @@
 import Vue from 'vue'
-import PressCore from '@peynman/press-vue-core'
-import AdminComponentsDictionary from '../../../src//components/admin-schemas'
-import CKEditorSchema from '../../../src/components/Inputs/CKEditorInput/schema.js'
-import ParagraphView from '../../../src/components/Inputs/ParagraphView/schema.js'
+import PressCore from '@peynman/press-vue-admin'
+import AdminComponentsDictionary from '@peynman/press-vue-admin/components/admin-schemas'
+import CKEditorSchema from '@peynman/press-vue-admin/components/Inputs/CKEditorInput/schema.js'
+import ParagraphView from '@peynman/press-vue-admin/components/Inputs/ParagraphView/schema.js'
 import WebTypes from './webTypes'
 
-import CartStatusList from '@peynman/press-vue-core/crud/Cart/status'
+import CartStatusList from '../../../src/crud/Cart/status'
 
 export const SchemasDictionary = {
   ...AdminComponentsDictionary,
@@ -24,7 +24,7 @@ export default $store => (new PressCore(Vue, {
   store: $store,
   schemaTypesDictionary: $component => (SchemasDictionary),
   builderTypesDictionary: $component => (BuilderDictionary),
-  crudImportCallback: crud => import('@peynman/press-vue-core/crud/' + crud),
+  crudImportCallback: crud => import('../../../src/crud/' + crud),
   cartStatusList: $component => CartStatusList($component),
   chatRoomTypeList: $component => Object.entries($component.$t('component.website.chat.types')).map(e => ({
     text: e[1],

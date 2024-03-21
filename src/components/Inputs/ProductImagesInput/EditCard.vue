@@ -43,7 +43,7 @@
 
 <script>
   import ImageUploadInput from '../ImageUploadInput/ImageUploadInput.vue'
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
+  import Themeable from '../../../mixins/Themeable'
 
   export default {
     name: 'EditCard',

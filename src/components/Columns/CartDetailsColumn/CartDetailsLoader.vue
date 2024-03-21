@@ -32,7 +32,7 @@
 </template>
 
 <script>
-  import UserCartDetails from '@peynman/press-vue-core/mixins/UserCartDetails'
+  import UserCartDetails from '../../../mixins/UserCartDetails'
   import CartAmount from '../../UserCart/CartAmount.vue'
   import CartDelivery from '../../UserCart/CartDelivery.vue'
   import UserCartList from '../../UserCart/UserCartList.vue'

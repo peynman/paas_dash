@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Larapress Vue AdminPanel",
   "main": "index.js",
-  "module": "../src/routes.js",
+  "module": "../src/index.js",
   "license": "MIT",
   "private": false,
   "homepage": "https://github.com/peynman/press-vue-admin",
@@ -13,6 +13,12 @@
   "files": [
     "components/*",
     "locale/*",
+    "mixins/*",
+    "crud/*",
+    "pages/*",
+    "utils/*",
+    "templates/*",
+    "store/*",
     "index.js",
     "routes.js"
   ],
@@ -25,7 +31,6 @@
     "build": "webpack"
   },
   "peerDependencies": {
-    "@peynman/press-vue-core": "^1"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.8",

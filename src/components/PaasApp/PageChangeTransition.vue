@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import User from '@peynman/press-vue-core/mixins/User'
+  import User from '../../mixins/User'
 
   export default {
     name: 'PageChangeTransition',

@@ -52,7 +52,7 @@
 </template>
 
 <script>
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
+  import Themeable from '../../../mixins/Themeable'
   import { LMap, LTileLayer, LMarker } from 'vue2-leaflet'
   import { OpenStreetMapProvider } from 'leaflet-geosearch'
   import LGeosearch from 'vue2-leaflet-geosearch'

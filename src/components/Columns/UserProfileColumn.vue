@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  import UserProfile from '@peynman/press-vue-core/mixins/UserProfile'
+  import UserProfile from '../../mixins/UserProfile'
 
   export default {
     name: 'UserProfileColumn',

@@ -20,9 +20,9 @@
 </template>
 
 <script>
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
-  import WidgetsRenderer from '@peynman/press-vue-core/mixins/WidgetsRenderer'
+  import Themeable from '../mixins/Themeable'
+  import FormValidations from '../mixins/FormValidations'
+  import WidgetsRenderer from '../mixins/WidgetsRenderer'
 
   export default {
     name: 'RemotePage',

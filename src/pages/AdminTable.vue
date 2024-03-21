@@ -42,9 +42,9 @@
 </template>
 
 <script>
-  import User from '@peynman/press-vue-core/mixins/User'
-  import CrudRoute from '@peynman/press-vue-core/mixins/CrudRoute'
-  import CrudTable from '@peynman/press-vue-core/mixins/CrudTable'
+  import User from '../mixins/User'
+  import CrudRoute from '../mixins/CrudRoute'
+  import CrudTable from '../mixins/CrudTable'
   import ValidationsAlert from '../components/Inputs/ValidationsAlert/ValidationsAlert.vue'
   import ConfirmRemoveDialog from '../components/Inputs/ConfirmDialog/ConfirmRemoveDialog.vue'
   import CrudEditor from '../components/Inputs/CrudEditor/CrudEditor.vue'

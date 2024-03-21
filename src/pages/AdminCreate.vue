@@ -10,11 +10,11 @@
 </template>
 
 <script>
-  import User from '@peynman/press-vue-core/mixins/User'
-  import CrudRoute from '@peynman/press-vue-core/mixins/CrudRoute'
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
+  import User from '../mixins/User'
+  import CrudRoute from '../mixins/CrudRoute'
+  import FormValidations from '../mixins/FormValidations'
   import { VCrudApiForm } from 'vuetify/lib/components/VCrud'
-  import WidgetsRenderer from '@peynman/press-vue-core/mixins/WidgetsRenderer'
+  import WidgetsRenderer from '../mixins/WidgetsRenderer'
 
   export default {
     name: 'AdminCreate',

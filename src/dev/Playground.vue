@@ -3,9 +3,9 @@
 </template>
 
 <script>
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
+  import FormValidations from '../mixins/FormValidations'
   import InputType from '../components/Inputs/SchemaType'
-  import { imageUploadProperty } from '@peynman/press-vue-core/utils/schemaHelpers'
+  import { imageUploadProperty } from '../utils/schemaHelpers'
 
   export default {
     name: 'Playground',

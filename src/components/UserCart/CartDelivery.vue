@@ -17,8 +17,8 @@
 </template>
 
 <script>
-  import Iran from '@peynman/press-vue-core/mixins/Iran'
-  import UserCartDetails from '@peynman/press-vue-core/mixins/UserCartDetails'
+  import Iran from '../../mixins/Iran'
+  import UserCartDetails from '../../mixins/UserCartDetails'
 
   export default {
     name: 'CartDelivery',

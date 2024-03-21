@@ -19,8 +19,8 @@
 </template>
 
 <script>
-  import UserCartDetails from '@peynman/press-vue-core/mixins/UserCartDetails'
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
+  import UserCartDetails from '../../mixins/UserCartDetails'
+  import Themeable from '../../mixins/Themeable'
   import CartMenuItem from './CartMenuItem.vue'
 
   export default {

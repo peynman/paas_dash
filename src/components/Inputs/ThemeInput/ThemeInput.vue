@@ -27,8 +27,8 @@
 </template>
 
 <script>
-  import { flattenObject, expandObject } from '@peynman/press-vue-core/utils/helpers'
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
+  import { flattenObject, expandObject } from '../../../utils/helpers'
+  import Themeable from '../../../mixins/Themeable'
 
   export default {
     name: 'ThemeInput',

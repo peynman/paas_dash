@@ -25,8 +25,8 @@
 
 <script>
   import ValidationsAlert from '../ValidationsAlert/ValidationsAlert.vue'
-  import FormValidations from '@peynman/press-vue-core/mixins/FormValidations'
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
+  import FormValidations from '../../../mixins/FormValidations'
+  import Themeable from '../../../mixins/Themeable'
 
   export default {
     name: 'PaginatedList',

@@ -36,8 +36,8 @@
 
 <script>
   import SingleStat from './SingleStat.vue'
-  import ChartSettings from '@peynman/press-vue-core/mixins/ChartSettings'
-  import TimestampFormatter from '@peynman/press-vue-core/mixins/TimestampFormatter'
+  import ChartSettings from '../../../../mixins/ChartSettings'
+  import TimestampFormatter from '../../../../mixins/TimestampFormatter'
 
   export default {
     name: 'CrudSingleStat',

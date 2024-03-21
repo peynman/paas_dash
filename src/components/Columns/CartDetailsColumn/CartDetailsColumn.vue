@@ -86,7 +86,7 @@
 </template>
 
 <script>
-  import TimestampFormatter from '@peynman/press-vue-core/mixins/TimestampFormatter'
+  import TimestampFormatter from '../../../mixins/TimestampFormatter'
   import CartDetailsLoader from './CartDetailsLoader.vue'
   import ConfirmRemoveDialog from '../../Inputs/ConfirmDialog/ConfirmRemoveDialog.vue'
 

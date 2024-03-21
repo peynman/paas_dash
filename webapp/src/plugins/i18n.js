@@ -1,10 +1,14 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
-import messages from '../../../src/lang/fa'
-import pressMessages from '@peynman/press-vue-core/lang/fa'
+import faAdminMsgs from '@peynman/press-vue-admin/locale/fa'
+import enAdminMsgs from '@peynman/press-vue-admin/locale/en'
+
+import en from '../locale/en'
+import fa from '../locale/fa'
+
 import {
   mergeDeep,
-} from '@peynman/press-vue-core/utils/helpers'
+} from '@peynman/press-vue-admin/utils/helpers'
 
 Vue.use(VueI18n)
 
@@ -44,12 +48,19 @@ const numberFormats = {
 const i18n = new VueI18n({
   locale: 'fa', // set locale
   fallbackLocale: 'en',
-  messages: mergeDeep(pressMessages, messages), // set locale messages
+  messages: mergeDeep(
+    // admin messages
+    faAdminMsgs,
+    enAdminMsgs,
+    // app messages
+    en,
+    fa,
+  ), // set locale messages
   numberFormats,
 })
 export default i18n
 
-const loadedLanguages = ['fa'] // our default language that is preloaded
+const loadedLanguages = ['fa', 'en'] // our default language that is preloaded
 
 function setI18nLanguage (lang) {
   i18n.locale = lang

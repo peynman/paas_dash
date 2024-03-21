@@ -19,7 +19,7 @@
 
 <script>
   import ChatRoomDetails from './ChatRoomDetails.vue'
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
+  import Themeable from '../../../mixins/Themeable'
 
   export default {
     name: 'ChatRoomEditDialog',

@@ -2,8 +2,8 @@
   <v-navigation-drawer
     v-model="internalValue"
     app
-    right
     width="300px"
+    :right="isRTL"
     :color="theme.admin.navigation.color"
     :dark="theme.admin.navigation.dark"
     :light="theme.admin.navigation.light"
@@ -24,7 +24,7 @@
   import MenuItems from './menu'
   import NavigationItem from './NavigationItem.vue'
   import UserAccountDetailed from '../UserAccount/UserAccountDetailed.vue'
-  import Themeable from '@peynman/press-vue-core/mixins/Themeable'
+  import Themeable from '../../mixins/Themeable'
 
   export default {
     name: 'AdminNavigation',
@@ -40,6 +40,9 @@
       links () {
         return MenuItems(m => this.$t(m)).sort((m1, m2) => m1.order - m2.order)
       },
+      isRTL() {
+        return this.$vuetify.rtl
+      }
     },
     watch: {
       value (n) {

@@ -27,9 +27,9 @@
 </template>
 
 <script>
-  import UserProfileMethods from '@peynman/press-vue-core/mixins/UserProfileMethods'
-  import TimestampFormatter from '@peynman/press-vue-core/mixins/TimestampFormatter'
-  import User from '@peynman/press-vue-core/mixins/User'
+  import UserProfileMethods from '../../../mixins/UserProfileMethods'
+  import TimestampFormatter from '../../../mixins/TimestampFormatter'
+  import User from '../../../mixins/User'
 
   export default {
     name: 'ChatMessageItem',
